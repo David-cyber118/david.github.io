@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamentos - Papelería Pony</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #ffcc00;
+            padding: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        .contenedor {
+            display: grid;
+            gap: 10px;
+            padding: 20px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .item {
+            background: #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .item img {
+            width: 100px; /* Tamaño del ícono */
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            .contenedor {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 767px) {
+            .contenedor {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Papelería Pony</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="departamentos.html">Departamentos</a></li>
+                <li><a href="#">Ofertas del día</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Facturación</a></li>
+                <li><a href="#">Sucursales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contenedor">
+            <div class="item">
+                <img src="C:\Users\Ramsés\Pictures\3 papel.jpg">
+                <h3>Papel</h3>
+                <p>Encuentra todo tipo de papel: para impresoras, cuadernos, cartulinas y más. Ideal para tus necesidades escolares y de oficina.</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\Ramsés\Pictures\4 arte.jpg">
+                <h3>Arte</h3>
+                <p>Todo lo que necesitas para tus proyectos artísticos: pinceles, acuarelas, lápices, y más materiales para dar rienda suelta a tu creatividad.</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\Ramsés\Pictures\5 oficina.jpg">
+                <h3>Oficina</h3>
+                <p>Materiales y herramientas esenciales para tu oficina: carpetas, bolígrafos, post-its, organizadores y mucho más.</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\Ramsés\Pictures\6 tecno.jpg">
+                <h3>Tecnología</h3>
+                <p>Productos tecnológicos como impresoras, accesorios, cables y dispositivos para hacer tu trabajo más eficiente y moderno.</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\Ramsés\Pictures\7 regalos.jpg">
+                <h3>Regalos</h3>
+                <p>Una amplia selección de regalos para cualquier ocasión: desde artículos de oficina hasta obsequios personalizados y únicos.</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\Ramsés\Pictures\8 muebles.jpg">
+                <h3>Muebles</h3>
+                <p>Encuentra el mobiliario perfecto para tu hogar o oficina: escritorios, sillas ergonómicas, estanterías y más.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>Teléfono: 800-123-4567 | Email: contacto@papeleriapony.com</div>
+        <div>&copy; 2025 Papelería Pony - Todos los derechos reservados</div>
+    <div class="redes-sociales">
+            <!-- Íconos de redes sociales -->
+            <img src="C:\Users\Ramsés\Pictures\10 facebook.jpg">
+            <img src="C:\Users\Ramsés\Pictures\9 youtube.jpg">
+            <img src="C:\Users\Ramsés\Pictures\11 insta.jpg">
+        </div>
+</footer>
+</body>
+</html>

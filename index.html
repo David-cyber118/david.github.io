@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelería Pony</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #ffcc00;
+            padding: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+        }
+        .contenedor {
+            display: grid;
+            gap: 10px;
+            padding: 20px;
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
+        }
+        /* Estilo para cada elemento dentro de la columna */
+        .item {
+            padding: 20px;
+        }
+
+        /* Estilos para imágenes */
+        .contenedor img {
+            width: 70%; /* Hace que las imágenes se ajusten al contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+
+        /* Media Queries para diferentes tamaños de pantalla */
+        /* Para pantallas grandes (PC o pantallas grandes), se mantienen 3 columnas */
+        @media (min-width: 1024px) {
+            .contenedor {
+                grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+            }
+        }
+
+        /* Para pantallas medianas (tablets, pantallas medianas), se ajusta a 2 columnas */
+        @media (max-width: 1023px) and (min-width: 768px) {
+            .contenedor {
+                grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+            }
+        }
+
+        /* Para pantallas pequeñas (móviles, pantallas angostas), se ajusta a 1 columna */
+        @media (max-width: 767px) {
+            .contenedor {
+                grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+            }
+        }
+
+        /* Estilo para los íconos de redes sociales */
+        .redes-sociales {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .redes-sociales img {
+            width: 50px; /* Tamaño de los íconos */
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Papelería Pony</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="departamentos.html">Departamentos</a></li>
+                <li><a href="#">Ofertas del día</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Facturación</a></li>
+                <li><a href="#">Sucursales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contenedor">
+            <!-- Columna 1: Logo -->
+            <div class="item">
+                <img src="C:\Users\Ramsés\Pictures\1 Pony logo.jpg" alt="Logotipo de Papelería Pony">
+            </div>
+            <!-- Columna 2: Texto descriptivo -->
+            <div class="item">
+                <p>Pony es tu cadena de papelerías de confianza, donde encontrarás todo lo que necesitas para la escuela, la oficina y tus proyectos creativos. Con una amplia variedad de productos, promociones exclusivas y múltiples sucursales, estamos aquí para facilitar tu día a día. ¡Visítanos y descubre por qué en Pony siempre tenemos todo!</p>
+            </div>
+            <!-- Columna 3: Imagen de la tienda -->
+            <div class="item">
+                <img src="C:\Users\Ramsés\Pictures\2 vista de la tienda.jpg" alt="Imagen de la tienda">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>Teléfono: 800-123-4567 | Email: contacto@papeleriapony.com</div>
+        <div>&copy; 2025 Papelería Pony - Todos los derechos reservados</div>
+        <div class="redes-sociales">
+            <!-- Íconos de redes sociales -->
+            <img src="C:\Users\Ramsés\Pictures\10 facebook.jpg">
+            <img src="C:\Users\Ramsés\Pictures\9 youtube.jpg">
+            <img src="C:\Users\Ramsés\Pictures\11 insta.jpg">
+        </div>
+    </footer>
+</body>
+</html>
