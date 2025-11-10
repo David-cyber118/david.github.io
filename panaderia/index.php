@@ -1,0 +1,87 @@
+<?php
+// index.php (PANTALLA DE LOGIN/REGISTRO/BIENVENIDA)
+session_start();
+
+// 1. VERIFICACIÓN DE SESIÓN: Si el usuario ya tiene sesión, lo redirigimos inmediatamente.
+// Esto evita que el index intente cargarse si ya está logueado en otro lado.
+if (isset($_SESSION['id_cliente'])) {
+    // Si el cliente ya está logueado, lo enviamos directamente al Catálogo (vista funcional)
+    header("Location: panel_cliente.php?vista=catalogo");
+    exit;
+}
+if (isset($_SESSION['id_empleado'])) {
+    // Si el empleado ya está logueado, lo enviamos a Pedidos
+    header("Location: panel_empleado.php?vista=pedidos");
+    exit;
+}
+// Si no hay sesión, continuamos y mostramos la pantalla de acceso.
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>1 Panadería Fátima - Acceso</title>
+    <style>
+        /* Estilos base para la pantalla de Login (Ventana 1 de Acceso) */
+        body {
+            background-color: #0d0d26; /* Fondo azul oscuro/negro */
+            color: white; 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center;
+        }
+        h1 { 
+            font-size: 2.5em; 
+            padding: 20px 0 10px;
+        }
+
+        /* Contenedor de la imagen */
+        .img-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .img-container img {
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilos de botones de acceso */
+        .access-buttons {
+            margin-top: 20px;
+            padding-bottom: 30px;
+        }
+        .access-buttons a {
+            text-decoration: none; 
+            padding: 15px 30px; 
+            margin: 0 10px; 
+            border-radius: 5px;
+            color: white; 
+            font-weight: bold; 
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+        /* Color de los botones de acceso */
+        .btn-rojo { background-color: #d9534f; }
+        .btn-rojo:hover { background-color: #c9302c; }
+    </style>
+</head>
+<body>
+
+    <h1>1 Panadería Fátima</h1>
+
+    <div class="img-container">
+        <img src="https://via.placeholder.com/600x400?text=Rebanada+de+Pastel" 
+             alt="Pastel de Chocolate">
+    </div>
+
+    <div class="access-buttons">
+        <a href="registro_cliente.php" class="btn-rojo">Registrase</a>
+        <a href="login_cliente.php" class="btn-rojo">Iniciar sesión</a>
+        <a href="login_empleado.php" class="btn-rojo">Sesión administrador / Vendedor</a>
+    </div>
+
+</body>
+</html>
